@@ -1,0 +1,47 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<title>庫存管理系統 - 龍凰甲子焿</title>
+	<link href="images/icon-1-32x.ico" rel="icon">
+	<link type="text/css" href="css/bootstrap.min.css" rel="stylesheet">
+	<link type="text/css" href="css/style.manage.css" rel="stylesheet">
+	<link type="text/json" href="manifest.json" rel="manifest">
+	<script type="text/javascript" src="script/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="script/jquery.mobile-events.min.js"></script>
+	<script type="text/javascript" src="script/jquery.cookie-1.4.1.min.js"></script>
+	<script type="text/javascript" src="script/bootstrap.min.js"></script>
+	<script>
+		$(function(){
+			defineLoginScript({
+				form: "#form-login",
+				api: "php/api_User_Check.php",
+				file: "manage.html"
+			});
+		});
+	</script>
+	<script type="text/javascript" src="manage/jquery.visicon.js"></script>
+</head>
+<body class="pattern">
+	<div class="container-fluid">
+		<div class="container card">
+			<img class="card-image" src="images/icon-login-2x.png" />
+			<form role="form" id="form-login" name="lgForm">
+				<div class="form-group">
+					<label for="input-Account"></label>
+					<input type="text" class="form-control" id="input-Account" name="Account" placeholder="帳號">
+				</div>
+				<div class="form-group">
+					<label for="input-Password"></label>
+					<input type="password" class="form-control" id="input-Password" name="Password" placeholder="密碼">
+				</div>
+				<button type="submit" class="btn btn-block btn-primary" id="btn-login">登入</button>
+				<div class="form-group">
+					<div id="result" role="alert" class="alert"></div>
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
